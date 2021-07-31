@@ -1,0 +1,129 @@
+Hello and welcome back.
+So in this task, we're going to work with the dataset we've
+prepared from the previous task To find a good measure
+for our analysis, this measure should be represented
+as a number which can describe the spread of the virus
+in a country.
+If you look at this plot, which represents cumulative number
+of conference cases, you already know this plot.
+The time period of this plot is from 22nd of 
+the January until 30th of April.
+Uh, Now let's plot this.
+Let's change the time period and plot this for only
+1st 3 days.
+so basically from 22nd of the January
+until 25th of January.
+For that, what we can do is to say, corona dataset aggregated.
+dot loc
+I loc China, get the data related to china.
+And then I say I want it from the beginning until the third
+element.
+It means the 1st 3 days of the pandemic in China and then
+plot it to see what the data looks like.
+Okay, so we run it.
+Here is the plot, but as you can see in 22nd of January
+we had 550 confirmed cases and after 24 hours later
+in 23rd of the January, we had 650 infected cases.
+So it means that in 24 hours, 100 new cases infected cases
+has been recorded in this day.
+And, as you can see from 23rd off the generator
+until 24th off the January Ah, actually, we had so
+in 24th of January we had 900 cases and in 23rd of January
+we had 650 cases.
+So it means that in one day the next day Ah, the growth off
+infected cases was 250.
+So now what if we say we want to find and measure which
+can describe the spread of the virus in this period?
+So we can say that the spread of the virus is the average
+number off new confirmed cases or we can say maximum number
+off new cases which we were going for the maximum a number
+of infected cases.
+So what we have to do for our period, it means that what
+you want to do, we want to calculate the maximum infection
+rate or maximum number off new infected cases, in our,
+period.
+So let's do .
+If you say corona dataset aggregated, I say loc again on I get data
+related to China and what I want to do What I can do
+for finding the rate off this curve, I can calculate
+the first derivative of this curve can say diff
+this method will calculate the first derivative off
+this data and then plot it okay if I run this , uh, as you
+can see, the plot looks like this,
+this plot shows us
+the change in infection rate day by day in our period.
+And what we are looking for is this maximum number.
+So what we can do for calculating that we can say again
+Ah, Corona dataset aggregated.
+I loc the China again and I calculate the first derrivative
+and I take a max by putting Max method at the end
+Of this I run this.
+This whole thing will return number in one day.
+Ah, so this number can tell us in one day in 24 hours
+15,136 new infected cases has been recorded in Only 24 hours.
+And for example, if I do this again for another country
+like Italy, first in the first derivative and then take
+the max I run to say again.
+So it says in one day, 6557 new cases has been recorded.
+Okay, I want you to pause the video and find this number
+for Spain in this block.
+Okay, That's great.
+So it says in one day in Spain, 9630 people has been infected.
+So what we want to do here is to find the maximum infection
+rate for all of the countries.
+We can do this by using a simple loop.
+Okay, so I I create a variable called countries.
+This is the list of the name of the all of the countries
+that we have.
+We can get it from corona dataset aggregated our data frame.
+dot index. 
+This will return the indices of our dataframe
+as you know, indices of our data frame.
+Is the country names and  
+I easily cast it to list. okay.
+And then I create an empty list I call it.
+Ah, maximum max infection rates.
+This is an empty list, so I'll create a for loop, I say
+for each country.
+Or, let's say, for C in countries, what I can do is
+calculates This maximum infection rate for every country.
+So I can say Corona aggregated and I loc and pass in C.
+ I calculate the first derivative, and then I'll take
+the max.
+As you know this thing .
+This line of code will return us and number and directly.
+We can append this to our max infection rates.
+list dot append 
+and everything is
+fine. Okay, so if we run this, go to see if it works, okay,
+let's type maximum infection rates to see what is inside
+of it. So as you can see, we have calculated the maximum
+infection rate for every each of the country that we have.
+So it's better to put these values as a column in our data
+frame. Corona dataset aggregated. 
+So for doing this, I can say corona dataset aggregated
+I will create a new column.
+I name it Maximum infection rate for each country ,
+and I put it equaled to the list that we have created.
+Okay, if I run this So here we can say corona.
+data aggregated dot head,to see what we have.
+Okay, So for each country, we have data related
+to cumulative number of cases.
+And at the end of this, we have the maximum infection we added
+ this new column, As you know, we don't need these values
+this columns anymore.
+So we just need to, delete all of this columns.
+So I prefer to create a new data frame so I can say corona data
+it is a new variable and I equality to pd dot Dataframe 
+and then
+and then
+I will pass in corona dataset
+aggregated.
+and I will pass in this columns only maximum infection rate.
+So if you run this and we look a  head 1st 5 rows
+of this data set the dataframe.
+I can say dot head and run this, and here you have our data.
+Okay, that's it for this task.
+In the next ask, we will import the data set related to World
+Happiness report and we will prepare it for our analysis.
+See you in the next task.
